@@ -2,7 +2,7 @@ package phones;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import phone.base.InterfacePhone;
+import phone.base.IRingable;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,7 +11,7 @@ class TestIPhone {
 
         @BeforeEach
         void create_new_instances() {
-            iPhone = new IPhone();
+            iPhone = new IPhone("iPhone", 7, "Apple");
         }
         @Test
         void ring_should_return_string() {
@@ -26,7 +26,7 @@ class TestIPhone {
         void iphone_should_implement_InterfacePhone(){
 //        given
             IPhone testedClass = iPhone;
-            assertInstanceOf(InterfacePhone.class, testedClass);
+            assertInstanceOf(IRingable.class, testedClass);
         }
 
         @Test

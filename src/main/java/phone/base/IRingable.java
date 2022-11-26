@@ -1,6 +1,7 @@
 package phone.base;
 
-public interface InterfacePhone {
+public interface IRingable {
     String ring();
     String unlock();
+
 }

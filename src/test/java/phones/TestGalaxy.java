@@ -2,17 +2,16 @@ package phones;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import phone.base.InterfacePhone;
+import phone.base.IRingable;
 
-import static org.junit.jupiter.api.Assertions.assertInstanceOf;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class TestGalaxy {
     Galaxy galaxy;
 
     @BeforeEach
     void create_new_instances() {
-        galaxy = new Galaxy();
+        galaxy = new Galaxy("Galaxy", 5, "Samsung");
     }
     @Test
     void ring_should_return_string() {
@@ -27,17 +26,18 @@ class TestGalaxy {
     void galaxy_should_implement_InterfacePhone(){
 //        given
         Galaxy testedClass = galaxy;
-        assertInstanceOf(InterfacePhone.class, testedClass);
+        assertInstanceOf(IRingable.class, testedClass);
     }
 
     @Test
     void unlock_should_return_string() {
 //        given
-        String expected = "Unlocked!";
+        String expected = "Unlocking!";
 //        when
         String actual = galaxy.unlock();
 //        then
         assertTrue(expected.equals(actual));
     }
+
 
 }
