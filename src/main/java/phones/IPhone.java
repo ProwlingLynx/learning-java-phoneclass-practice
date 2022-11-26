@@ -1,4 +1,6 @@
 package phones;
 
-public class IPhone {
+import phone.base.AbstractPhone;
+
+public class IPhone extends AbstractPhone {
 }

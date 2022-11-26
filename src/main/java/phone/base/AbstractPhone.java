@@ -4,11 +4,11 @@ public abstract class AbstractPhone implements InterfacePhone{
 
     @Override
     public String ring() {
-        return null;
+        return "Brrring!";
     }
 
     @Override
     public String unlock() {
-        return null;
+        return "Unlocked!";
     }
 }
