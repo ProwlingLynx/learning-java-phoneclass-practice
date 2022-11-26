@@ -10,11 +10,11 @@ public class Galaxy extends AbstractPhone implements IRingable {
 
     @Override
     public String ring() {
-        return null;
+        return "Brrring!";
     }
 
     @Override
     public String unlock() {
-        return null;
+        return "Unlocking!";
     }
 }

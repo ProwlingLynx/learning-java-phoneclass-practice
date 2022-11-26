@@ -2,6 +2,7 @@ package phones;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import phone.base.AbstractPhone;
 import phone.base.IRingable;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -28,7 +29,10 @@ class TestGalaxy {
         Galaxy testedClass = galaxy;
         assertInstanceOf(IRingable.class, testedClass);
     }
-
+    @Test
+    void galaxy_should_extend_AbstractPhone(){
+        assertInstanceOf(AbstractPhone.class, galaxy);
+    }
     @Test
     void unlock_should_return_string() {
 //        given
