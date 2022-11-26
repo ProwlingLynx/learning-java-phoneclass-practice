@@ -1,4 +1,14 @@
 package phone.base;
 
-public class AbstractPhone {
+public abstract class AbstractPhone implements InterfacePhone{
+
+    @Override
+    public String ring() {
+        return null;
+    }
+
+    @Override
+    public String unlock() {
+        return null;
+    }
 }
