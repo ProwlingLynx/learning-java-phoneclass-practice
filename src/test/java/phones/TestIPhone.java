@@ -2,6 +2,7 @@ package phones;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import phone.base.AbstractPhone;
 import phone.base.IRingable;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,7 +17,7 @@ class TestIPhone {
         @Test
         void ring_should_return_string() {
 //        given
-            String expected = "Brrring!";
+            String expected = "Munch munch!";
 //        when
             String result = iPhone.ring();
 //        then
@@ -30,9 +31,14 @@ class TestIPhone {
         }
 
         @Test
+        void iphone_should_be_instance_of_AbstractPhone(){
+            assertInstanceOf(AbstractPhone.class, iPhone);
+        }
+
+        @Test
         void unlock_should_return_string() {
 //        given
-            String expected = "Unlocked!";
+            String expected = "It's always open!";
 //        when
             String actual = iPhone.unlock();
 //        then

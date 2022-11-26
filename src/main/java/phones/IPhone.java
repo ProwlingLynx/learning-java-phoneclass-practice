@@ -10,11 +10,11 @@ public class IPhone extends AbstractPhone implements IRingable {
 
     @Override
     public String ring() {
-        return null;
+        return "Munch munch!";
     }
 
     @Override
     public String unlock() {
-        return null;
+        return "It's always open!";
     }
 }
